@@ -73,11 +73,6 @@ return {
             if require("astrolsp").config.features.codelens then vim.lsp.codelens.refresh { bufnr = args.buf } end
           end,
         },
-        {
-          event = { "CursorMoved", "CursorMovedI", "BufLeave" },
-          desc = "Document Highlighting Clear",
-          callback = function() vim.lsp.buf.clear_references() end,
-        },
       },
     },
     -- mappings to be set up on attaching of a language server
